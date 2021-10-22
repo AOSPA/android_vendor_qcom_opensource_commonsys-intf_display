@@ -16,6 +16,24 @@
       "message": "Any reason?",
       "revId": "7e1b881a5579164d8334374385cfb6a04b9d840c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c46bbfad_dd582408",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000553
+      },
+      "writtenOn": "2021-10-22T08:25:42Z",
+      "side": 1,
+      "message": "they are moved to seperate repo and renamed , but still hals and many components are depended on them",
+      "parentUuid": "a21f7339_5638b6cb",
+      "revId": "7e1b881a5579164d8334374385cfb6a04b9d840c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
