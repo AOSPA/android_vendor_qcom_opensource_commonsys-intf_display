@@ -51,6 +51,23 @@
       "parentUuid": "3b6bbeb1_7f484439",
       "revId": "2a8b7b4e9af6e6a08cc8b1a568761e7b2e9f964c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66254f99_9c67acfa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-09-04T16:36:13Z",
+      "side": 1,
+      "message": "discussed on telegram, merging for now.",
+      "revId": "2a8b7b4e9af6e6a08cc8b1a568761e7b2e9f964c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
