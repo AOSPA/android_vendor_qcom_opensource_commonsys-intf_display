@@ -33,6 +33,24 @@
       "message": "moreover, we also need to revert a commit in Hal display as well ",
       "revId": "2a8b7b4e9af6e6a08cc8b1a568761e7b2e9f964c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f9cb708_0480e332",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-09-04T16:24:26Z",
+      "side": 1,
+      "message": "nope, it breaks 7325/7350/8350.  We do not have newer binaries and as you said, it\u0027s not implemented in HAL.",
+      "parentUuid": "3b6bbeb1_7f484439",
+      "revId": "2a8b7b4e9af6e6a08cc8b1a568761e7b2e9f964c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
