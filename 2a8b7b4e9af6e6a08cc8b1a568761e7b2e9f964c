@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b6bbeb1_7f484439",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-09-04T12:10:33Z",
+      "side": 1,
+      "message": "This is only bad for devices that use old display hals and don\u0027t have the necessary commit for it. since we always use the last hals, it works fine for us.",
+      "revId": "2a8b7b4e9af6e6a08cc8b1a568761e7b2e9f964c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
