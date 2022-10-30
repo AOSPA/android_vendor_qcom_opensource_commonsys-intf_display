@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ab90423_4b818cc2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-30T15:58:43Z",
+      "side": 1,
+      "message": "I intentionally didn\u0027t take this because our hals should support it.  can you take another look at the latest 9.12?",
+      "revId": "3ed1ea14388b8f4dbb8e0259bd5e44c7aa63e079",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
