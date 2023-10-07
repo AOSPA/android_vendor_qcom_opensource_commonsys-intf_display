@@ -105,8 +105,10 @@ struct private_handle_t {
 #ifdef __cplusplus
   static const int kNumFds = 2;
   static const int kMagic = 'gmsm';
+#ifndef GRALLOC_HANDLE_HAS_NO_UBWCP
   unsigned int linear_size;
   int ubwcp_format;
+#endif
 
   static inline int NumInts() {
     return ((sizeof(private_handle_t) - sizeof(native_handle_t)) / sizeof(int)) - kNumFds;
@@ -137,8 +139,11 @@ struct private_handle_t {
 #ifndef GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE
         ,custom_content_md_reserved_size(0)
 #endif
+#ifndef GRALLOC_HANDLE_HAS_NO_UBWCP
         ,linear_size(0),
-        ubwcp_format(format) {
+        ubwcp_format(format)
+#endif
+{
     version = static_cast<int>(sizeof(native_handle));
     numInts = NumInts();
     numFds = kNumFds;
