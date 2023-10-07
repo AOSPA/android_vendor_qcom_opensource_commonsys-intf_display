@@ -98,7 +98,9 @@ struct private_handle_t {
   uint64_t base;
   uint64_t base_metadata;
   uint64_t gpuaddr;
+#ifndef GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE
   unsigned int reserved_size;
+#endif
 #ifndef GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE
   unsigned int custom_content_md_reserved_size;
 #endif
@@ -133,7 +135,9 @@ struct private_handle_t {
         base(0),
         base_metadata(0),
         gpuaddr(0),
+#ifndef GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE
         reserved_size(0),
+#endif
         linear_size(0),
         ubwcp_format(format)
 #ifndef GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE
@@ -180,10 +184,9 @@ struct private_handle_t {
   static void Dump(const private_handle_t *hnd) {
     ALOGD("handle id:%" PRIu64
           " wxh:%dx%d uwxuh:%dx%d size: %d fd:%d fd_meta:%d flags:0x%x "
-          "usage:0x%" PRIx64 "  format:0x%x layer_count: %d reserved_size = %d "
+          "usage:0x%" PRIx64 "  format:0x%x layer_count",
           hnd->id, hnd->width, hnd->height, hnd->unaligned_width, hnd->unaligned_height, hnd->size,
-          hnd->fd, hnd->fd_metadata, hnd->flags, hnd->usage, hnd->format, hnd->layer_count,
-          hnd->reserved_size);
+          hnd->fd, hnd->fd_metadata, hnd->flags, hnd->usage, hnd->format, hnd->layer_count);
   }
 
   int GetUnalignedWidth() const { return unaligned_width; }
