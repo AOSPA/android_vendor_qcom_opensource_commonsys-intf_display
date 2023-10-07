@@ -1,6 +1,28 @@
+soong_config_module_type {
+    name: "qtidisplaycommonsys_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "qtidisplaycommonsys",
+    bool_variables: [
+        "gralloc_handle_has_no_custom_content_md_reserved_size",
+    ],
+    properties: [
+        "export_cflags",
+    ],
+}
+
+qtidisplaycommonsys_cc_defaults {
+    name: "qtidisplaycommonsys_defaults",
+    soong_config_variables: {
+        gralloc_handle_has_no_custom_content_md_reserved_size: {
+            export_cflags: ["-DGRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE"],
+        },
+    },
+}
+
 cc_library_headers {
     name: "display_intf_headers",
     vendor_available: true,
+    defaults: ["qtidisplaycommonsys_defaults"],
     export_include_dirs: [
         "gralloc",
         "include",
