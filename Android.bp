@@ -1,6 +1,7 @@
 cc_library_headers {
     name: "display_intf_headers",
     vendor_available: true,
+    defaults: ["qtidisplaycommonsys_defaults"],
     export_include_dirs: [
         "gralloc",
         "include",
