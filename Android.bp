@@ -1,14 +1,14 @@
 cc_library_headers {
     name: "display_intf_headers",
     vendor_available: true,
-    export_cflags: select(soong_config_variable("qtidisplay", "gralloc_handle_has_custom_content_md_reserved_size"), {
-        "true": ["-DGRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE"],
+    export_cflags: select(soong_config_variable("qtidisplaycommonsys", "gralloc_handle_has_no_custom_content_md_reserved_size"), {
+        "true": ["-DGRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE"],
         default: [],
-    }) + select(soong_config_variable("qtidisplay", "gralloc_handle_has_reserved_size"), {
-        "true": ["-DGRALLOC_HANDLE_HAS_RESERVED_SIZE"],
+    }) + select(soong_config_variable("qtidisplaycommonsys", "gralloc_handle_has_no_reserved_size"), {
+        "true": ["-DGRALLOC_HANDLE_HAS_NO_RESERVED_SIZE"],
         default: [],
-    }) + select(soong_config_variable("qtidisplay", "gralloc_handle_has_ubwcp_format"), {
-        "true": ["-DGRALLOC_HANDLE_HAS_UBWCP_FORMAT"],
+    }) + select(soong_config_variable("qtidisplaycommonsys", "gralloc_handle_has_no_ubwcp"), {
+        "true": ["-DGRALLOC_HANDLE_HAS_NO_UBWCP"],
         default: [],
     }),
     export_include_dirs: [

@@ -149,15 +149,15 @@ struct private_handle_t : public native_handle_t {
   uint64_t base;
   uint64_t base_metadata;
   uint64_t gpuaddr;
-#ifdef GRALLOC_HANDLE_HAS_RESERVED_SIZE
+#ifndef GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE
   unsigned int reserved_size;
 #endif
-#ifdef GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE
+#ifndef GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE
   unsigned int custom_content_md_reserved_size;
 #endif
   static const int kNumFds = 2;
   static const int kMagic = 'gmsm';
-#ifdef GRALLOC_HANDLE_HAS_UBWCP_FORMAT
+#ifndef GRALLOC_HANDLE_HAS_NO_UBWCP
   unsigned int linear_size;
   int ubwcp_format;
 #endif
@@ -187,13 +187,13 @@ struct private_handle_t : public native_handle_t {
         base(0),
         base_metadata(0),
         gpuaddr(0)
-#ifdef GRALLOC_HANDLE_HAS_RESERVED_SIZE
+#ifndef GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE
         ,reserved_size(0)
 #endif
-#ifdef GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE
+#ifndef GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE
         ,custom_content_md_reserved_size(0)
 #endif
-#ifdef GRALLOC_HANDLE_HAS_UBWCP_FORMAT
+#ifndef GRALLOC_HANDLE_HAS_NO_UBWCP
         ,linear_size(0)
         ,ubwcp_format(format)
 #endif
